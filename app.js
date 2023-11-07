@@ -1,26 +1,35 @@
 let minutos = 24;
-let segundos = 60;
+let segundos = 60-1;
 let cronometro;
 
 function iniciarCronometro() {
   cronometro = setInterval(function () {
-      segundos -=1
-      if (segundos <= 0) {
-        clearInterval(segundos)
-        segundos=60
-        minutos--
-      } else {
-        document.getElementById("minutos").innerHTML = `${minutos} `
-        document.getElementById("segundos").innerHTML = `: ${segundos}`
+    segundos -= 1;
+    if (segundos < 0) {
+      if (minutos <= 0) {
+        if (document.getElementById("titulo").innerHTML === 'Desanse 5 minutos') {
+          minutos = 24;
+          segundos = 60 -1;
+          document.getElementById("titulo").innerHTML = 'Volte a estudar:';
+        } else {
+          minutos = 4;
+          segundos = 60-1;
+          document.getElementById("titulo").innerHTML = 'Desanse 5 minutos';
         }
-      }, 1000)
+      } else {
+        minutos -= 1;
+        segundos = 59;
+      }
     }
+    document.getElementById("minutos").innerHTML = `${minutos}`;
+    document.getElementById("segundos").innerHTML = `: ${segundos}`;
+  }, 1000);
+}
 
 function pararCronometro() {
-  minutos=25
-  segundos=60
-  document.getElementById("minutos").innerHTML = `${minutos}`
-  document.getElementById("segundos").innerHTML = `: ${segundos}`
-
-  clearInterval(cronometro)
+  clearInterval(cronometro);
+  minutos = 25;
+  segundos = 60;
+  document.getElementById("minutos").innerHTML = `${minutos}`;
+  document.getElementById("segundos").innerHTML = `: ${segundos}`;
 }

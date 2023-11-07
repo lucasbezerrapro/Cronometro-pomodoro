@@ -1,5 +1,5 @@
 let minutos = 24;
-let segundos = 60-1;
+let segundos = 60;
 let cronometro;
 
 function iniciarCronometro() {
@@ -9,7 +9,7 @@ function iniciarCronometro() {
       if (minutos <= 0) {
         if (document.getElementById("titulo").innerHTML === 'Desanse 5 minutos') {
           minutos = 24;
-          segundos = 60 -1;
+          segundos = 60;
           document.getElementById("titulo").innerHTML = 'Volte a estudar:';
         } else {
           minutos = 4;

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>cronometro</title>
+</head>
+  <body>
+    
+    <div class="relogio">
+      <div class="cronometro">
+        
+        <div class="tempo">
+          <h1 style="color: white;" >Pomodoro</h1>
+          <span id="minutos">25 :  </span>
+          <span id="segundos">00</span>
+        </div>
+        <a onclick="iniciarCronometro()" id="iniciar">Iniciar</a>
+        <a onclick="pararCronometro()" id="parar">Parar</a>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -13,7 +13,7 @@ function iniciarCronometro() {
           document.getElementById("titulo").innerHTML = 'Volte a estudar:';
         } else {
           minutos = 4;
-          segundos = 60-1;
+          segundos = 60;
           document.getElementById("titulo").innerHTML = 'Desanse 5 minutos';
         }
       } else {
@@ -28,7 +28,7 @@ function iniciarCronometro() {
 
 function pararCronometro() {
   clearInterval(cronometro);
-  minutos = 25;
+  minutos = 24;
   segundos = 60;
   document.getElementById("minutos").innerHTML = `${minutos}`;
   document.getElementById("segundos").innerHTML = `: ${segundos}`;

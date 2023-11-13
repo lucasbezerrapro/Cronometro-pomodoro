@@ -81,3 +81,18 @@ span {
   color: red;
   transition: 0.9s;
 }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+  .relogio {
+    width: 330px;
+    height: 630px;
+  }
+
+  .cronometro {
+    width: 300px;
+    height: 600px;
+  }
+}

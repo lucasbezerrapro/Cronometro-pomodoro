@@ -8,8 +8,8 @@ function iniciarCronometro() {
     if (segundos < 0) {
       if (minutos <= 0) {
         if (document.getElementById("titulo").innerHTML === 'Desanse 5 minutos') {
-          minutos = 24;
-          segundos = 60;
+          minutos = 25;
+          segundos = 0;
           document.getElementById("titulo").innerHTML = 'Volte a estudar:';
         } else {
           minutos = 4;
@@ -23,13 +23,22 @@ function iniciarCronometro() {
     }
     document.getElementById("minutos").innerHTML = `${minutos}`;
     document.getElementById("segundos").innerHTML = `: ${segundos}`;
+
+    document.getElementById("iniciar").disabled = true;
+    document.getElementById("iniciar").backgroundColor = "gray"
   }, 1000);
 }
 
 function pararCronometro() {
   clearInterval(cronometro);
-  minutos = 24;
-  segundos = 60;
+  minutos = 25;
+  segundos = 0;
+
+  if (segundos < 10) {
+    segundos = "0" + segundos
+  }
   document.getElementById("minutos").innerHTML = `${minutos}`;
   document.getElementById("segundos").innerHTML = `: ${segundos}`;
+
+  document.getElementById("iniciar").disabled = false;
 }

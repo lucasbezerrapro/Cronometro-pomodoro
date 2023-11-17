@@ -85,7 +85,6 @@ span {
 #iniciar:hover {
   background: #204b02;
   color: greenyellow;
-  transition: 0.9s;
 }
 
 #parar:hover {

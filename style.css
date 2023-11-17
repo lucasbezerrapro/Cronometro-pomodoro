@@ -82,10 +82,6 @@ span {
   cursor: pointer;
 }
 
-#iniciar:hover {
-  background: #204b02;
-  color: greenyellow;
-}
 
 #parar:hover {
   background: #590e0e;

@@ -60,8 +60,19 @@ span {
   margin-bottom: 10px;
   color: #204b02;
   cursor: pointer;
+  z-index: 1;
 }
-
+#iniciarDisabled {
+  background: rgb(237, 255, 209);
+  border: none;
+  padding: 8px 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #204b02;
+  cursor: pointer;
+  z-index: 0;
+  display: none;
+}
 
 #parar {
   background: red;

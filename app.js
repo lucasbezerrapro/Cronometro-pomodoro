@@ -23,22 +23,21 @@ function iniciarCronometro() {
     }
     document.getElementById("minutos").innerHTML = `${minutos}`;
     document.getElementById("segundos").innerHTML = `: ${segundos}`;
-
-    document.getElementById("iniciar").disabled = true;
-    document.getElementById("iniciar").backgroundColor = "gray"
+    document.getElementById("iniciar").style.display = 'none'
+    document.getElementById("iniciarDisabled").style.display = 'block'
+    
   }, 1000);
 }
 
 function pararCronometro() {
   clearInterval(cronometro);
-  minutos = 25;
-  segundos = 0;
+  minutos = 24;
+  segundos = 60;
+  document.getElementById("minutos").innerHTML = `${'25'}`;
+  document.getElementById("segundos").innerHTML = `: ${'00'}`;
+  document.getElementById("iniciar").style.display = 'block'
+  document.getElementById("iniciarDisabled").style.display = 'none'
 
-  if (segundos < 10) {
-    segundos = "0" + segundos
-  }
-  document.getElementById("minutos").innerHTML = `${minutos}`;
-  document.getElementById("segundos").innerHTML = `: ${segundos}`;
 
-  document.getElementById("iniciar").disabled = false;
+
 }

@@ -1,105 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Digital-7&display=swap');
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-
 body {
-  background: linear-gradient(to bottom, rgb(112, 3, 185), purple);
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Digital-7', sans-serif;
-  text-align: center;
+	height: 100%;
+	padding: 100px;
+    display : flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
-h1{
-  margin-top: -70px;
-  padding-bottom: 110px;
-  font-family:  Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-size: 50px;
+ul {
+	list-style: none;
+	display: flex;
 }
-.relogio {
-  width: 430px;
-  height: 630px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(255, 255, 255);
-  border-radius: 50px;
+li {
+	background: rgb(61, 125, 214);
+	padding-left: 45px;
+	padding-top: 6px;
+	padding-right: 45px;
+	padding-bottom: 6px;
+	margin: 3px;
+	border: 1px solid #000;
+	color: #FFF;
+	font-weight: bolder;
+	cursor: pointer;
 }
-
-.cronometro {
-  width: 400px;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: rgb(120, 49, 200);
-  border-radius: 50px;
-}
-
 
 span {
-  font-size: 80px;
-  color: #FFF;
-  text-transform: uppercase;
+	font-size: 70px;
+	font-weight: bold;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	text-align: center;
 }
+.cronometro {
+	text-align: center;
+}
+button{
+	padding: 20px;
+	margin: 40px 20px 0 0;
+	border-radius: 7px;
+	border: none;
+	cursor: pointer;
 
+}
+.botao {
+	display: flex;
+	justify-content: center;
+}
 #iniciar {
-  background: #adff2f;
-  border: none;
-  padding: 8px 40px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  color: #204b02;
-  cursor: pointer;
-  z-index: 1;
-}
-#iniciarDisabled {
-  background: rgb(237, 255, 209);
-  border: none;
-  padding: 8px 40px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  color: #204b02;
-  cursor: pointer;
-  z-index: 0;
-  display: none;
+	background: #59cf86;
 }
 
+#pausar {
+	display: none;
+	background: yellow;
+}
 #parar {
-  background: red;
-  border: none;
-  padding: 8px 40px;
-  color: #590e0e;
-  cursor: pointer;
-}
-
-
-#parar:hover {
-  background: #590e0e;
-  color: red;
-  transition: 0.9s;
-}
-
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 40px;
-  }
-  .relogio {
-    width: 330px;
-    height: 630px;
-  }
-
-  .cronometro {
-    width: 300px;
-    height: 600px;
-  }
+	background: red;
 }
